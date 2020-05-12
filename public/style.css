@@ -1,0 +1,128 @@
+:root {
+  --light: rgb(255, 255, 255);
+  --dark: rgb(37, 44, 54);
+  --dark-blue: rgb(44, 47, 64);
+  --dark-blue-2: rgb(65, 71, 94);
+  --orange: rgb(207, 131, 5);
+
+  --chat-border-radius: 20px;
+}
+
+html, body {
+  background-color: var(--dark);
+}
+
+body, button, input, select, textarea {
+  font-family: 'Quicksand', sans-serif;
+}
+
+#landbot-app {
+  max-height: 100vh;
+  background-color: transparent;
+}
+
+.chat-container {
+  width: 425px;
+  height: calc(100vh - 3rem - 3rem);
+  margin: 0 auto;
+}
+
+.landbot-chat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--chat-border-radius);
+  background-color: var(--dark-blue);
+}
+
+.landbot-header {
+  padding: 15px 30px; 
+  background-color: var(--dark-blue-2);
+  border-top-left-radius: var(--chat-border-radius);
+  border-top-right-radius: var(--chat-border-radius);
+}
+
+.landbot-messages-container {
+  flex: 1;
+  overflow: auto;
+  padding: 36px 20px;
+  /* margin-bottom: 12px; */
+}
+
+.landbot-message {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.landbot-message + .landbot-message {
+  margin-top: 12px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.landbot-message[data-author="bot"] + .landbot-message[data-author="bot"],
+.landbot-message[data-author="user"] + .landbot-message[data-author="user"] {
+  margin-top: 3px;
+}
+
+.landbot-message[data-author="user"] {
+  justify-content: flex-end;
+}
+
+.landbot-message-avatar {
+  display: none;
+}
+
+.landbot-message-content {
+  color: var(--light);
+  padding: 8px 15px;
+  border-radius: 18px;
+  display: inline-block;
+  flex-grow: 0;
+}
+
+.landbot-message[data-author="bot"] .landbot-message-content {
+  background-color: var(--dark-blue-2);
+  border-bottom-left-radius: 2px; 
+}
+
+.landbot-message[data-author="user"] .landbot-message-content {
+  background-color: var(--orange);
+  border-bottom-right-radius: 2px;
+}
+
+.landbot-input-container {
+  position: relative;
+  background-color: var(--dark-blue-2);
+  border-bottom-left-radius: var(--chat-border-radius);
+  border-bottom-right-radius: var(--chat-border-radius);
+}
+
+.landbot-input {
+  width: 100%;
+  color: var(--light);
+  padding: 20px 55px 20px 25px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.landbot-input-send {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange);
+  background-color: transparent;
+  border: 0;
+}
+
+.landbot-input-send:hover {
+  color: var(--orange);
+}
+
+.button[disabled] {
+  background-color: transparent;
+  border-color: transparent;
+}

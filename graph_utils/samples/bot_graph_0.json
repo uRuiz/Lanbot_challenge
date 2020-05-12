@@ -1,0 +1,105 @@
+{
+  "connections": {
+    "bot_start.$success--Nk11zbelp": {
+      "id": "bot_start.$success--Nk11zbelp",
+      "type": "$success",
+      "sourcePath": "bot_start",
+      "targetPath": "Nk11zbelp"
+    },
+    "Nk11zbelp.$yes--Nk11zbmgv": {
+      "id": "Nk11zbelp.$yes--Nk11zbmgv",
+      "type": "$yes",
+      "sourcePath": "Nk11zbelp",
+      "targetPath": "Nk11zbmgv"
+    },
+    "Nk11zdott.default--Nk11zc8t3": {
+      "id": "Nk11zdott.default--Nk11zc8t3",
+      "type": "default",
+      "sourcePath": "Nk11zdott",
+      "targetPath": "Nk11zc8t3"
+    },
+    "Nk11zbmgv.$success--Nk11zh7ux": {
+      "id": "Nk11zbmgv.$success--Nk11zh7ux",
+      "type": "$success",
+      "sourcePath": "Nk11zbmgv",
+      "targetPath": "Nk11zh7ux"
+    },
+    "Nk11zh7ux.$success--Nk11zc79l": {
+      "id": "Nk11zh7ux.$success--Nk11zc79l",
+      "type": "$success",
+      "sourcePath": "Nk11zh7ux",
+      "targetPath": "Nk11zc79l"
+    },
+    "Nk11zbelp.$no--Nk11zbt04": {
+      "id": "Nk11zbelp.$no--Nk11zbt04",
+      "type": "$no",
+      "sourcePath": "Nk11zbelp",
+      "targetPath": "Nk11zbt04"
+    },
+    "Nk11zbt04.$success--Nk13s6idq": {
+      "id": "Nk11zbt04.$success--Nk13s6idq",
+      "type": "$success",
+      "sourcePath": "Nk11zbt04",
+      "targetPath": "Nk13s6idq"
+    },
+    "Nk13s6idq.A--Nk11zc79l": {
+      "id": "Nk13s6idq.A--Nk11zc79l",
+      "type": "A",
+      "sourcePath": "Nk13s6idq",
+      "targetPath": "Nk11zc79l"
+    },
+    "Nk13s6idq.B--Nk11zc79l": {
+      "id": "Nk13s6idq.B--Nk11zc79l",
+      "type": "B",
+      "sourcePath": "Nk13s6idq",
+      "targetPath": "Nk11zc79l"
+    }
+  },
+  "nodes": {
+    "bot_start": {
+      "id": "bot_start",
+      "top": 160,
+      "left": 300
+    },
+    "Nk11zbelp": {
+      "id": "Nk11zbelp",
+      "top": 160,
+      "left": 550
+    },
+    "Nk11zbmgv": {
+      "id": "Nk11zbmgv",
+      "top": 160,
+      "left": 820
+    },
+    "Nk11zbt04": {
+      "id": "Nk11zbt04",
+      "top": 240,
+      "left": 820
+    },
+    "Nk11zc79l": {
+      "id": "Nk11zc79l",
+      "top": 160,
+      "left": 1400
+    },
+    "Nk11zc8t3": {
+      "id": "Nk11zc8t3",
+      "top": 380,
+      "left": 820
+    },
+    "Nk11zdott": {
+      "id": "Nk11zdott",
+      "top": 380,
+      "left": 550
+    },
+    "Nk11zh7ux": {
+      "id": "Nk11zh7ux",
+      "top": 160,
+      "left": 1120
+    },
+    "Nk13s6idq": {
+      "id": "Nk13s6idq",
+      "top": 250,
+      "left": 1120
+    }
+  }
+}
