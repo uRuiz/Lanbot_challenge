@@ -10,7 +10,7 @@ A frontend developer must have a minimum functional programming knowledge to wor
 The purpose of this challenge is implementing several functions, part of a complete library to handle graphs efficiently.
 
 Tasks:
-- Implement the functions defined in `./graph_utils/graph_utils.js`.
+- Implement the functions defined in `./src/graph_utils/graph_utils.js`.
 - Execute tests with `npm test` and check that all functions passed.
 
 > Note: Read carefully the [docs](./DOCS.md) 
