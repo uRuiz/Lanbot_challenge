@@ -10,7 +10,12 @@
  * @returns {Array} Array of Connection models.
  */
 export function getNodeInputConnections(node, graph) {
+  const { id } = node;
+  const { connections } = graph;
+
+  const nodeInputConnections =  Object.entries(connections).filter((entry) => entry[1].targetPath === id).map((entry) => entry[1]);
   
+  return nodeInputConnections;
 }
 
 /**
@@ -21,7 +26,12 @@ export function getNodeInputConnections(node, graph) {
  * @returns {Array} Array of Connection models.
  */
 export function getNodeOutputConnections(node, graph) {
-  
+  const { id } = node;
+  const { connections } = graph;
+
+  const nodeOutputConnections =  Object.entries(connections).filter((entry) => entry[1].sourcePath === id).map((entry) => entry[1]);
+
+  return nodeOutputConnections;
 }
 
 /**
@@ -32,7 +42,11 @@ export function getNodeOutputConnections(node, graph) {
  * @returns {Array} Array of Connection models.
  */
 export function getNodeConnections(node, graph) {
+  const nodeInputConnections = getNodeInputConnections(node, graph)
+  const nodeOutputConnections = getNodeOutputConnections(node, graph);
+  const nodeConnections = nodeInputConnections.concat(nodeOutputConnections);
   
+  return nodeConnections;
 }
 
 /**
@@ -42,7 +56,14 @@ export function getNodeConnections(node, graph) {
  * @returns {Array} Array of Node models.
  */
 export function getLeafNodes(graph) {
-  
+  const { nodes } = graph;
+  const { connections } = graph;
+
+  const nodeConnections =  Object.entries(connections).map((entry) => entry[1]).map(nodeOutput => nodeOutput.sourcePath);
+  const nodesIds = Object.entries(nodes).map((entry) => entry[1]).map(element => element.id).filter(node => !nodeConnections.includes(node));
+  const filteredNodes = Object.entries(nodes).map((entry) => entry[1]).filter(element => nodesIds.includes(element.id));
+
+  return filteredNodes;
 }
 
 /**
@@ -52,7 +73,14 @@ export function getLeafNodes(graph) {
  * @returns {Array} Array of Node models.
  */
 export function getRootNodes(graph) {
-  
+  const { nodes } = graph;
+  const { connections } = graph;
+
+  const nodeConnections =  Object.entries(connections).map((entry) => entry[1]).map(nodeOutput => nodeOutput.targetPath);
+  const nodesIds = Object.entries(nodes).map((entry) => entry[1]).map(element => element.id).filter(element => !nodeConnections.includes(element));
+  const filteredNodes = Object.entries(nodes).map((entry) => entry[1]).filter(element => nodesIds.includes(element.id))
+
+  return filteredNodes;
 }
 
 /**
