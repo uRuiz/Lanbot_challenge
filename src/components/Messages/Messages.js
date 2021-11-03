@@ -1,6 +1,12 @@
 import React from "react";
 import { messagesFilter } from "../../helpers/messageFunctions";
 
+/**
+ * Messages: Display all messages sorted by date.
+ *
+ * @param {Object} messages Node model object.
+ */
+
 export const Messages = ({ messages }) => (
   <div id="landbot-messages-container" className="landbot-messages-container">
     {Object.values(messages)

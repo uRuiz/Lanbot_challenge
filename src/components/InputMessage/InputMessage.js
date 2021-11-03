@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { core } from "../../config/firebase_config";
 
+/**
+ * InputMessage: Display an input.
+ *
+ */
+
 export const InputMessage = () => {
   const [input, setInput] = useState("");
 

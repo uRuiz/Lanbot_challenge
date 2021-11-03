@@ -4,6 +4,11 @@ import { Messages } from "../Messages/Messages";
 import { InputMessage } from "../InputMessage/InputMessage";
 import { useMessages } from "../../hooks/useMessages";
 
+/**
+ * Chat: Display the Chat component.
+ * 
+ */
+
 export const Chat = () => {
   const messages = useMessages();
 

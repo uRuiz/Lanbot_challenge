@@ -6,6 +6,12 @@ import {
   scrollBottom,
 } from "../helpers/messageFunctions";
 
+/**
+ * useMessages: Function to return all messages from firebase.
+ * 
+ * @returns {Array} Array of messages
+ */
+
 export const useMessages = () => {
   const [messages, setMessages] = useState({});
 
