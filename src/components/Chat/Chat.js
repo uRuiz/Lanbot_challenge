@@ -6,7 +6,7 @@ import { useMessages } from "../../hooks/useMessages";
 
 /**
  * Chat: Display the Chat component.
- * 
+ *
  */
 
 export const Chat = () => {

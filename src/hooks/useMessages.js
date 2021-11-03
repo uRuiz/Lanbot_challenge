@@ -8,30 +8,30 @@ import {
 
 /**
  * useMessages: Function to return all messages from firebase.
- * 
+ *
  * @returns {Array} Array of messages
  */
 
 export const useMessages = () => {
-  const [messages, setMessages] = useState({});
+  const [messagesFromServer, setMessagesFromServer] = useState({});
 
   useEffect(() => {
     core.pipelines.$readableSequence.subscribe((data) => {
-      setMessages((messages) => ({
+      setMessagesFromServer((messages) => ({
         ...messages,
         [data.key]: parseMessage(data),
       }));
     });
 
     core.init().then((data) => {
-      setMessages(parseMessages(data.messages));
+      setMessagesFromServer(parseMessages(data.messages));
     });
   }, []);
 
   useEffect(() => {
     const container = document.getElementById("landbot-messages-container");
     scrollBottom(container);
-  }, [messages]);
+  }, [messagesFromServer]);
 
-  return messages;
+  return messagesFromServer;
 };
