@@ -7,6 +7,12 @@ export function parseMessages(messages) {
     }, {});
 }
 
+/**
+ * parseMessage: Transform data.
+ * @param {Object} data ;
+ * 
+ */
+
 export function parseMessage(data) {
   return {
     key: data.key,
@@ -17,10 +23,22 @@ export function parseMessage(data) {
   };
 }
 
+/**
+ * messagesFilter: Filter text and dialog messages.
+ * @param {Object} data messages;
+ * 
+ */
+
 export function messagesFilter(data) {
   /** Support for basic message types */
   return ['text', 'dialog'].includes(data.type);
 }
+
+/**
+ * scrollBottom: Scroll to the bottom.
+ * @param {Object} container HTML document;
+ * 
+ */
 
 export function scrollBottom(container) {
   if (container) {
