@@ -91,5 +91,7 @@ export function getRootNodes(graph) {
  * @returns {Boolean} True if a node has different source paths.
  */
 export function hasMultipleSources(node, graph) {
-  
+  const nodeInputConnections = getNodeInputConnections(node, graph);
+
+  return nodeInputConnections.length > 1 ? true : false;
 }
