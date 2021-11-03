@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Messages } from '../Messages/Messages';
-import { InputMessage } from '../InputMessage/InputMessage';
-import { useMessages } from '../../hooks/useMessages';
+import { Messages } from "../Messages/Messages";
+import { InputMessage } from "../InputMessage/InputMessage";
+import { useMessages } from "../../hooks/useMessages";
 
 export const Chat = () => {
-
   const messages = useMessages();
 
   return (
@@ -13,9 +12,9 @@ export const Chat = () => {
       <div className="landbot-header">
         <h1 className="subtitle">Landbot</h1>
       </div>
-      
-      <Messages messages={messages}/>
+
+      <Messages messages={messages} />
       <InputMessage />
     </>
   );
-}
+};

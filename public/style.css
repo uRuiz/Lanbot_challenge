@@ -8,12 +8,17 @@
   --chat-border-radius: 20px;
 }
 
-html, body {
+html,
+body {
   background-color: var(--dark);
 }
 
-body, button, input, select, textarea {
-  font-family: 'Quicksand', sans-serif;
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Quicksand", sans-serif;
 }
 
 #landbot-app {
@@ -36,7 +41,7 @@ body, button, input, select, textarea {
 }
 
 .landbot-header {
-  padding: 15px 30px; 
+  padding: 15px 30px;
   background-color: var(--dark-blue-2);
   border-top-left-radius: var(--chat-border-radius);
   border-top-right-radius: var(--chat-border-radius);
@@ -83,7 +88,7 @@ body, button, input, select, textarea {
 
 .landbot-message[data-author="bot"] .landbot-message-content {
   background-color: var(--dark-blue-2);
-  border-bottom-left-radius: 2px; 
+  border-bottom-left-radius: 2px;
 }
 
 .landbot-message[data-author="user"] .landbot-message-content {
