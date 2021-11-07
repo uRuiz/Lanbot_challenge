@@ -1,13 +1,13 @@
 import React from "react";
 
-import { Messages } from "./Messages";
+import { MessageList } from "./MessageList";
 
 export default {
-  title: "Messages",
-  component: Messages,
+  title: "MessageList",
+  component: MessageList,
 };
 
-const Template = (args) => <Messages messages={args} />;
+const Template = (args) => <MessageList messages={args} />;
 
 export const MessageStory = Template.bind({});
 
