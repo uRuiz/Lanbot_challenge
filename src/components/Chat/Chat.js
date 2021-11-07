@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Messages } from "../Messages/Messages";
+import { MessageList } from "../MessageList/MessageList";
 import { InputMessage } from "../InputMessage/InputMessage";
 import { useMessages } from "../../hooks/useMessages";
 
@@ -18,7 +18,7 @@ export const Chat = () => {
         <h1 className="subtitle">Landbot</h1>
       </div>
 
-      <Messages messages={messages} />
+      <MessageList messages={messages} />
       <InputMessage />
     </>
   );
